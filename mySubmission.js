@@ -97,9 +97,10 @@ if (currentTruck.length) {
     vrp.push(currentTruck);
 }
 
-vrp.forEach((t) => {
-    //console.log(calculateTotalTime(t))
-    console.log(t);
+vrp.forEach((loadList) => {
+    process.stdout.write("[");
+    process.stdout.write(loadList.join(", "));
+    process.stdout.write("]\n");
 });
 
 
